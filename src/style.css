@@ -1,0 +1,137 @@
+body {
+    background-color: lightblue;
+}
+
+.main-container {
+    position: absolute;
+    left: 30%;
+    top: 25%;
+    width: 700px;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: slateblue;
+    border-radius: 5px;
+
+}
+.readMode{
+    position: absolute;
+    right: 11px;
+    top: 7px;
+    display: flex;
+    align-items: flex-start;
+}
+.readMode > h3 {
+    margin: 3px 10px 0 0;
+}
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 27px;
+  }
+.switch input {display:none;}
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 20px;
+    width: 20px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+input:checked + .slider {
+    background-color: #2196F3;
+  }
+  
+input:focus + .slider {
+    box-shadow: 0 0 1px #2196F3;
+  }
+  
+input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+  }
+.slider.round {
+    border-radius: 34px;
+  }
+  
+.slider.round:before {
+    border-radius: 50%;
+  }
+.input-container {
+    width: 55%;
+    height: 30px;
+    display: flex;
+    justify-content: space-between;
+}
+.input-container > * {
+    width: 200px;
+    height: 23px;
+    border-radius: 6px;
+    outline: none;
+    border: none;
+}
+
+.addButton {
+    width: 135px;
+}
+.tag-container{
+    width: 55%;
+    min-height: 255px;
+    height: min-content;
+    border: 1px solid red;
+    border-radius: 30px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.hide {
+    pointer-events: none;
+}
+
+.tag {
+    width: max-content;
+    height: 26px;
+    background-color: lightcoral;
+    text-align: center;
+    border-radius: 10px;
+    margin: 5px;
+}
+
+.tag > span {
+    margin-left: 10px;
+}
+
+.deleteBut {
+    height: 17px;
+    padding-top: 5;
+    position: relative;
+    top: 5px;
+    margin-left: 8px;
+    opacity: 0.6;
+}
+
+.deleteBut:hover {
+    opacity: 1;
+}
